@@ -15,3 +15,9 @@ Clone from: https://github.com/rackodo/chat-bubbles-for-yt
 The main repo, live preview website don't working anymore so i clone to my github create the github action for deploy long live website
 
 I think this never go down, if github page still live
+
+
+TO-DO:
+
+- [x] feat: add keyboard sound option (cuz not all users have great sound keyboard and mic)
+-> Solution: https://github.com/hainguyents13/mechvibes
