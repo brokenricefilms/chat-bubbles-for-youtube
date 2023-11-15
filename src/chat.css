@@ -1,6 +1,6 @@
 .chat {
   padding-left: 86px;
-  padding-bottom: 200px;
+  padding-bottom: 50px;
 
   display: flex;
   flex-flow: column wrap;

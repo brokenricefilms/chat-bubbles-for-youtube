@@ -3,6 +3,11 @@
   color: var(--bubble-color);
 }
 
+.bubble-container {
+  height: 200px;
+  width: 100%;
+}
+
 .bubble-content {
   background-color: var(--background-color);
   border-radius: 30px;
@@ -34,10 +39,10 @@
 
 .bubble:last-child .bubble-content:after,
 .bubble:nth-last-child(2) .bubble-content:after {
-  background: #00a000!important;
+  background: #00a000 !important;
   border-bottom-right-radius: 15px;
   bottom: 0;
-  content: "";
+  content: '';
   height: 27px;
   left: -15px;
   position: absolute;

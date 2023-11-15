@@ -15,7 +15,13 @@ interface BubbleInputProps {
   strokeColour: string
 }
 
-const BubbleInput = ({ onChange, onSubmit, value, fillColour, strokeColour }: BubbleInputProps) => {
+const BubbleInput = ({
+  onChange,
+  onSubmit,
+  value,
+  fillColour,
+  strokeColour
+}: BubbleInputProps) => {
   const refEditable = useRef<HTMLDivElement>(null)
   const refContainer = useRef<HTMLDivElement>(null)
   const [submitted, setSubmitted] = useState(false)
@@ -48,22 +54,24 @@ const BubbleInput = ({ onChange, onSubmit, value, fillColour, strokeColour }: Bu
   useEffect(handleBlur, [handleBlur])
 
   return (
-    <div
-      ref={refContainer}
-      className={`bubble input  ${value.length === 0 ? 'empty' : ''} ${
-        submitted ? 'submitted' : ''
-      }`}
-    >
+    <div className="bubble-container">
       <div
-        ref={refEditable}
-        className="bubble-content"
-        contentEditable
-        style={{backgroundColor: fillColour, color: strokeColour}}
-        spellCheck="false"
-        onBlur={handleBlur}
-        onKeyDown={handleKeyDown}
-        onInput={e => onChange(e.currentTarget.innerText)}
-      />
+  ref={refContainer}
+        className={`bubble input  ${value.length === 0 ? 'empty' : ''} ${
+          submitted ? 'submitted' : ''
+        }`}
+      >
+        <div
+          ref={refEditable}
+          className="bubble-content"
+          contentEditable
+          style={{ backgroundColor: fillColour, color: strokeColour }}
+          spellCheck="false"
+          onBlur={handleBlur}
+          onKeyDown={handleKeyDown}
+          onInput={e => onChange(e.currentTarget.innerText)}
+        />
+      </div>
     </div>
   )
 }
