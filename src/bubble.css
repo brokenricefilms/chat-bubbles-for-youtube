@@ -1,0 +1,46 @@
+.bubble {
+  width: 100%;
+  color: var(--bubble-color);
+}
+
+.bubble-content {
+  background-color: var(--background-color);
+  border-radius: 30px;
+  padding: 12px 20px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  display: inline-block;
+  max-width: 600px;
+}
+
+.bubble-content {
+  margin-right: 25%;
+  position: relative;
+  overflow-wrap: break-word;
+}
+
+.bubble:last-child .bubble-content:before,
+.bubble:nth-last-child(2) .bubble-content:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: -12px;
+  height: 26px;
+  width: 30px;
+  background: inherit;
+  border-bottom-right-radius: 20px;
+}
+
+.bubble:last-child .bubble-content:after,
+.bubble:nth-last-child(2) .bubble-content:after {
+  background: #00a000!important;
+  border-bottom-right-radius: 15px;
+  bottom: 0;
+  content: "";
+  height: 27px;
+  left: -15px;
+  position: absolute;
+  width: 15px;
+  z-index: 1;
+}
