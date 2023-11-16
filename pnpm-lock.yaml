@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource-variable/montserrat':
+    specifier: ^5.0.16
+    version: 5.0.16
   framer-motion:
     specifier: ^9.1.7
     version: 9.1.7(react-dom@18.2.0)(react@18.2.0)
@@ -37,6 +40,9 @@ devDependencies:
   vite:
     specifier: ^4.5.0
     version: 4.5.0
+  vite-plugin-compression2:
+    specifier: ^0.11.0
+    version: 0.11.0
 
 packages:
 
@@ -252,6 +258,10 @@ packages:
     dev: true
     optional: true
 
+  /@fontsource-variable/montserrat@5.0.16:
+    resolution: {integrity: sha512-KwPT4ccZE1MY9fnlKBOWCTCz/siApJCHnS9nFhTBzo8eybFYLWQ0kaiZJXz6K0lpKAkBCO4fIkCaL8SSnLiKhg==}
+    dev: false
+
   /@icons/material@0.2.4(react@18.2.0):
     resolution: {integrity: sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==}
     peerDependencies:
@@ -259,6 +269,20 @@ packages:
     dependencies:
       react: 18.2.0
     dev: false
+
+  /@rollup/pluginutils@5.0.5:
+    resolution: {integrity: sha512-6aEYR910NyP73oHiJglti74iRyOwgFU4x3meH/H8OJx6Ry0j6cOVZ5X/wTvub7G7Ao6qaHBEaNsV3GLJkSsF+Q==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@types/estree': 1.0.5
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
+    dev: true
 
   /@swc/core-darwin-arm64@1.3.96:
     resolution: {integrity: sha512-8hzgXYVd85hfPh6mJ9yrG26rhgzCmcLO0h1TIl8U31hwmTbfZLzRitFQ/kqMJNbIBCwmNH1RU2QcJnL3d7f69A==}
@@ -383,6 +407,10 @@ packages:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
     dev: true
 
+  /@types/estree@1.0.5:
+    resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
+    dev: true
+
   /@types/prop-types@15.7.10:
     resolution: {integrity: sha512-mxSnDQxPqsZxmeShFH+uwQ4kO4gcJcGahjjMFeLbKE95IAZiiZyiEepGZjtXJ7hN/yfu0bu9xN2ajcU0JcxX6A==}
     dev: true
@@ -463,6 +491,10 @@ packages:
       '@esbuild/win32-x64': 0.18.20
     dev: true
 
+  /estree-walker@2.0.2:
+    resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
+    dev: true
+
   /framer-motion@9.1.7(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-nKxBkIO4IPkMEqcBbbATxsVjwPYShKl051yhBv9628iAH6JLeHD0siBHxkL62oQzMC1+GNX73XtPjgP753ufuw==}
     peerDependencies:
@@ -520,6 +552,11 @@ packages:
 
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
+    dev: true
+
+  /picomatch@2.3.1:
+    resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
+    engines: {node: '>=8.6'}
     dev: true
 
   /postcss@8.4.31:
@@ -615,6 +652,14 @@ packages:
     resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
     engines: {node: '>=4.2.0'}
     hasBin: true
+    dev: true
+
+  /vite-plugin-compression2@0.11.0:
+    resolution: {integrity: sha512-U6oEyRXZD26BynOgD/tStNTbQOLPt96aQNj/gdJTicKVYCQCdlV7QdmSF7VEhSyjiS59pQRhiMBu/uajprxWLA==}
+    dependencies:
+      '@rollup/pluginutils': 5.0.5
+    transitivePeerDependencies:
+      - rollup
     dev: true
 
   /vite@4.5.0:
