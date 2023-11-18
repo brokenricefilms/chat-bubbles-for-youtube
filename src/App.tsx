@@ -11,8 +11,8 @@ import React from 'react'
 function App() {
   const [messages, addMessage] = useMessages([])
   const [newMessage, setNewMessage] = useState('')
-  const [fillColour, setFillColour] = useState('#eee')
-  const [strokeColour, setStrokeColour] = useState('#000')
+  const [fillColour, setFillColour] = useState('#e6e5eb')
+  const [strokeColour, setStrokeColour] = useState('#000000')
 
   const handleSubmit = useCallback(
     (bubbleHeight: number) => {
