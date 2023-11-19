@@ -25,6 +25,8 @@ For firefox user need to disable that, to able to type
 
 I don't know the really reason is, maybe about privacy stuff
 
+work best on chromium base btw, you can download the min browser for minimal ui 
+
 ## TO-DO
 
 - [x] feat: add keyboard sound option (cuz not all users have great sound keyboard and mic)
