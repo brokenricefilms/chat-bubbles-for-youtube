@@ -19,7 +19,7 @@ I think this never go down, if github page still live
 
 ## issue
 
-![image](https://github.com/ongedit/chat-bubbles-for-youtube/assets/40050527/da7f8c8c-ecbc-49af-bad7-02b7b15fea8e)
+![image](https://github.com/licitfree/chat-bubbles-for-youtube/assets/40050527/da7f8c8c-ecbc-49af-bad7-02b7b15fea8e)
 
 For firefox user need to disable that, to able to type
 
