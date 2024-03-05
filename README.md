@@ -5,7 +5,7 @@ Chat bubble tool for YouTube
 
 A tool for recording typing animations and sounds with imitated chat UI.
 
-- LIVE: https://thuantanphamfilms.github.io/chat-bubbles-for-youtube/
+- LIVE: [https://thuantanphamfilms.github.io/chat-bubbles-for-youtube/](https://brokenricefilms.github.io/chat-bubbles-for-youtube/)
 - [Video tutorial](https://youtu.be/zu_vqAWHy_E)
 
 Customisable bubble colour by [rackodo](https://github.com/rackodo).
