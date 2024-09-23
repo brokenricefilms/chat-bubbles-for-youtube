@@ -4,6 +4,7 @@ export interface Message {
   id: number
   text: string
   height: number
+  timeout: number
 }
 
 const useMessages = (initialValue: Array<Message> = []) => {
@@ -18,7 +19,7 @@ const useMessages = (initialValue: Array<Message> = []) => {
           n.shift()
           return n
         })
-      }, 15000)
+      }, msg.timeout)
     },
     [setMessages]
   )

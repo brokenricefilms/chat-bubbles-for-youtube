@@ -6,13 +6,13 @@ import BubbleInput from './bubble-input'
 import Chat from './chat'
 import useMessages from './use-messages'
 import { SketchPicker } from 'react-color'
-import React from 'react'
 
 function App() {
   const [messages, addMessage] = useMessages([])
   const [newMessage, setNewMessage] = useState('')
   const [fillColour, setFillColour] = useState('#e6e5eb')
   const [strokeColour, setStrokeColour] = useState('#000000')
+  const [bubbleTimeout, setBubbleTimeout] = useState(500)
 
   const handleSubmit = useCallback(
     (bubbleHeight: number) => {
@@ -20,7 +20,8 @@ function App() {
         addMessage({
           id: +new Date(),
           text: newMessage,
-          height: bubbleHeight
+          height: bubbleHeight,
+          timeout: bubbleTimeout
         })
         setNewMessage('')
       }
@@ -29,24 +30,38 @@ function App() {
   )
 
   const handleFillColourChange = (color: { hex: string }) => {
-    setFillColour(color.hex);
-      console.log(color);
-  };
+    setFillColour(color.hex)
+    console.log(color)
+  }
 
   const handleStrokeColourChange = (color: { hex: string }) => {
-    setStrokeColour(color.hex);
-      console.log(color);
-  };
+    setStrokeColour(color.hex)
+    console.log(color)
+  }
 
   const lastMessage = messages[messages.length - 1]
   const dy = lastMessage ? lastMessage.height : 0
+
+  const handleBubbleTimeoutIncrease = () => {
+    setBubbleTimeout(bubbleTimeout + 500)
+  }
+
+  const handleBubbleTimeoutDecrease = () => {
+    setBubbleTimeout(bubbleTimeout - 500)
+  }
 
   return (
     <div className="App">
       <Chat>
         <AnimatePresence>
           {messages.map(m => (
-            <Bubble key={m.id} id={m.id} dy={dy} fillColour={fillColour} strokeColour={strokeColour}>
+            <Bubble
+              key={m.id}
+              id={m.id}
+              dy={dy}
+              fillColour={fillColour}
+              strokeColour={strokeColour}
+            >
               {m.text}
             </Bubble>
           ))}
@@ -59,12 +74,27 @@ function App() {
           strokeColour={strokeColour}
         />
       </Chat>
-      
+
       <div className="picker">
         <p>Fill</p>
-        <SketchPicker color={fillColour} onChange={handleFillColourChange}/>
+        <SketchPicker color={fillColour} onChange={handleFillColourChange} />
         <p>Stroke</p>
-        <SketchPicker color={strokeColour} onChange={handleStrokeColourChange}/>
+        <SketchPicker
+          color={strokeColour}
+          onChange={handleStrokeColourChange}
+        />
+        <p>Bubble Timeout (Miliseconds)</p>
+        <div>
+          <button onClick={handleBubbleTimeoutDecrease}>-</button>
+          <input
+            type="number"
+            value={bubbleTimeout}
+            onChange={({ target: { value } }) =>
+              setBubbleTimeout(Number(value))
+            }
+          />
+          <button onClick={handleBubbleTimeoutIncrease}>+</button>
+        </div>
       </div>
     </div>
   )
