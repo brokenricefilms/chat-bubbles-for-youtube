@@ -18,7 +18,7 @@ I think this never go down, if github page still live
 
 Customisable chat bubble timeout by [Wahyudi](https://github.com/halowahyudi)
 
-Customisable bubble colour by [rackodo](https://github.com/rackodo).
+Customisable chat bubble colour by [rackodo](https://github.com/rackodo).
 
 ## issue
 
